@@ -42,6 +42,12 @@
         .footer-custom { background-color: #343a40 !important; color: white; padding: 40px 0 10px 0; }
         .footer-icons-bar { background-color: #212529; padding: 20px 0; margin-bottom: 15px; }
 
+        /* Estilo para texto justificado académico */
+        .academic-text {
+            text-align: justify;
+            line-height: 1.8;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +84,7 @@
                         </li>
                         
                         <li class="nav-item">
-                             <a class="nav-link active" aria-current="page" href="marcoTeorico.html">Marco Teórico</a>
+                            <a class="nav-link active" aria-current="page" href="marcoTeorico.html">Marco Teórico</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="video.html">Video</a>
@@ -94,31 +100,161 @@
 
     <main id="main-content" class="container" style="min-height: 500px; padding: 100px 0; text-align: center;">
         
-        <h1 class="display-4 text-dark mb-5">
-            <i class="bi bi-book-fill me-3 text-primary"></i> 
+        <h1 class="display-4 text-dark mb-5 fw-bold">
+            <i class="bi bi-book-fill me-3 text-warning"></i> 
             Marco Teórico
         </h1>
-        
+
+        <div class="row justify-content-center text-start">
+            <div class="col-lg-10 col-xl-9">
+
+                <div class="card mb-5 border-0 shadow-sm">
+                    <div class="card-header fw-bold text-white" style="background-color: #111;">
+                        <i class="bi bi-list-ul me-2"></i> Tabla de Contenido
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush list-unstyled">
+                            <li><a href="#antecedentes" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Antecedentes</a></li>
+                            <li><a href="#planteamiento" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Planteamiento del problema</a></li>
+                            <li><a href="#arbol" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Árbol de problemas</a></li>
+                            <li><a href="#formulacion" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Formulación del problema</a></li>
+                            <li><a href="#proposito" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Propósito del estudio</a></li>
+                            <li><a href="#metodologia" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Metodología</a></li>
+                            <li><a href="#planificacion" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Planificación de las Actividades</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <section id="antecedentes" class="mb-5">
+                    <h3 class="fw-bold mb-3" style="color: #CC0000;">3.1 Antecedentes</h3>
+                    <div class="academic-text">
+                        <p>
+                            El salón de belleza <strong>Ñak’utas Cabello Sano</strong> es un centro especializado en el cuidado capilar y estético, cuyo propósito principal es ofrecer tratamientos profesionales orientados a mejorar la salud, apariencia y vitalidad del cabello. A lo largo de su trayectoria, Ñak’utas se ha consolidado como un espacio reconocido por la aplicación de técnicas modernas, el uso de productos especializados y una atención personalizada hacia sus clientes. Su enfoque combina la estética tradicional con prácticas actuales de cosmetología, lo que permite brindar servicios como cortes, coloraciones, peinados, tratamientos reconstructivos, alisados y asesorías de imagen.
+                        </p>
+                        <p>
+                            El crecimiento de la demanda por servicios de belleza más saludables y menos invasivos impulsó a Ñak’utas Cabello Sano a fortalecer su identidad como un salón que prioriza el bienestar capilar. Esta visión ha permitido que el establecimiento adopte métodos más seguros y tecnológicamente actualizados, orientados no solo al embellecimiento, sino también al mantenimiento integral del cabello. El salón, ubicado en zonas estratégicas de la ciudad, atiende a una clientela diversa que busca soluciones confiables y de calidad en tratamientos capilares.
+                        </p>
+                        <p>
+                            En el marco del presente documento, se exponen los fundamentos que respaldan el funcionamiento del salón, así como los elementos técnicos y operativos que justifican su organización y servicios. El análisis permite comprender los criterios que influyen en la gestión del negocio, los beneficios de adoptar procesos estandarizados y los desafíos asociados a la oferta de tratamientos especializados en un entorno competitivo y en constante transformación.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="my-5 border-secondary opacity-25">
+
+                <section id="planteamiento" class="mb-5">
+                    <h3 class="fw-bold mb-3" style="color: #CC0000;">3.2 Planteamiento del problema</h3>
+                    <div class="academic-text">
+                        <p>
+                            El salón de belleza Ñak’utas Cabello Sano enfrenta diversas dificultades derivadas de la ausencia de un sistema organizado y unificado para la gestión de sus actividades operativas y administrativas. Actualmente, los procesos relacionados con la asignación de citas, el registro de clientes, el control de tratamientos realizados, el seguimiento de productos utilizados y la administración de pagos se llevan a cabo de manera manual o mediante herramientas aisladas. Esta falta de integración genera desorden, duplicación de tareas y una alta probabilidad de errores.
+                        </p>
+                        <p>
+                            Por ejemplo, el registro manual de citas puede ocasionar conflictos de horarios, pérdida de información o retrasos en la atención al cliente. Asimismo, el seguimiento de los tratamientos aplicados y de los productos empleados depende del criterio individual del personal, lo que dificulta mantener un historial claro y confiable. De igual manera, los pagos y costos asociados a cada servicio se manejan sin un sistema centralizado, lo que no solo consume tiempo, sino que también incrementa el riesgo de inconsistencias en la contabilidad diaria.
+                        </p>
+                        <p>
+                            La ausencia de una plataforma que centralice estos procesos también afecta la experiencia de los clientes, ya que no existe un mecanismo eficiente que permita visualizar su historial de servicios, conocer recomendaciones personalizadas o realizar reservas de manera más ágil. Esta situación limita la capacidad del salón para ofrecer una atención más profesional y optimizada, especialmente en un entorno donde la competencia y la demanda de servicios especializados están en constante crecimiento.
+                        </p>
+                        <p>
+                            En este contexto, surge la necesidad de implementar un sistema capaz de integrar y automatizar las funciones principales del salón de belleza, con el fin de mejorar la eficiencia operativa, minimizar errores y brindar una experiencia más satisfactoria tanto para el personal como para los clientes.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="my-5 border-secondary opacity-25">
+
+                <section id="arbol" class="mb-5">
+                    <h3 class="fw-bold mb-3" style="color: #CC0000;">3.3 Árbol de problemas</h3>
+                    
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-body text-center p-4 bg-light">
+                            <img src="../img/ArbolDeProblemas.png" class="img-fluid rounded mb-2" alt="Árbol de Problemas Ñak'utas">
+                            <p class="text-muted small fst-italic mt-2">Figura 1: Árbol de problemas del salón de belleza Ñak’utas Cabello Sano</p>
+                        </div>
+                    </div>
+
+                    <div class="academic-text">
+                        <p>
+                            El árbol de problemas del salón de belleza Ñak’utas Cabello Sano identifica como problema central la gestión desorganizada y manual de sus operaciones. Esta situación provoca retrasos en la atención, errores en los registros, descontrol del inventario y una baja calidad en la experiencia del cliente. Las causas principales son la ausencia de un sistema unificado de gestión, el manejo manual de citas y pagos, y la falta de control digital de productos y tratamientos. Frente a estas dificultades, surge la necesidad de implementar una solución que integre y automatice los procesos del salón para mejorar su eficiencia y competitividad.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="my-5 border-secondary opacity-25">
+
+                <section id="formulacion" class="mb-5">
+                    <h3 class="fw-bold mb-3" style="color: #CC0000;">3.4 Formulación del problema</h3>
+                    <div class="academic-text">
+                        <div class="alert alert-light border-start border-4 border-warning shadow-sm" role="alert">
+                            <h5 class="alert-heading fw-bold">Problema Principal</h5>
+                            <p class="mb-0">
+                                El problema principal que enfrenta el salón de belleza Ñak’utas Cabello Sano es la <strong>falta de un sistema unificado para la gestión de sus actividades operativas y administrativas.</strong>
+                            </p>
+                        </div>
+                        <p>
+                            Esta ausencia de integración genera ineficiencias en la asignación de citas, errores en los registros de servicios realizados, dificultades para llevar un control adecuado del inventario de productos y confusiones en el manejo de pagos. Como resultado, se producen retrasos en la atención al cliente, inconsistencias en la información y una disminución en la calidad del servicio ofrecido.
+                        </p>
+                        <p>
+                            La solución propuesta consiste en implementar un sistema tecnológico que centralice los procesos del salón, permitiendo administrar de manera eficiente las citas, el historial de tratamientos, el inventario y las transacciones económicas. Con ello se busca optimizar los recursos del establecimiento, mejorar la comunicación interna y la organización del personal, además de reducir los errores humanos asociados a la gestión manual. De esta manera, el salón podrá brindar una experiencia más profesional, ordenada y confiable a sus clientes.
+                        </p>
+                    </div>
+                </section>
+                
+                <hr class="my-5 border-secondary opacity-25">
+
+                <section id="proposito" class="mb-5">
+                    <h3 class="fw-bold mb-3" style="color: #CC0000;">3.5 Propósito del estudio</h3>
+                    <div class="p-4 bg-white border rounded shadow-sm text-center text-muted">
+                        <i class="bi bi-pencil-square fs-3 mb-2 d-block"></i>
+                        <em>Sección pendiente de desarrollo.</em>
+                    </div>
+                </section>
+
+                <section id="metodologia" class="mb-5">
+                    <h3 class="fw-bold mb-3" style="color: #CC0000;">3.6 Metodología</h3>
+                    <div class="p-4 bg-white border rounded shadow-sm text-center text-muted">
+                        <i class="bi bi-pencil-square fs-3 mb-2 d-block"></i>
+                        <em>Sección pendiente de desarrollo.</em>
+                    </div>
+                </section>
+
+                <section id="planificacion" class="mb-5">
+                    <h3 class="fw-bold mb-3" style="color: #CC0000;">3.7 Planificación de las Actividades</h3>
+                    <div class="p-4 bg-white border rounded shadow-sm text-center text-muted">
+                        <i class="bi bi-calendar-event fs-3 mb-2 d-block"></i>
+                        <em>Sección pendiente de desarrollo.</em>
+                    </div>
+                </section>
+
+            </div>
+        </div>
         
     </main>
+
     <footer class="footer-custom">
         <div class="container text-center">
-            
             <div class="footer-icons-bar text-white">
-                <div class="d-inline-flex align-items-center">
-                    <i class="bi bi-geo-alt-fill me-2"></i> [Ubicación]
+                
+                <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Torre+Las+Americas,+Av.+Arce,+La+Paz" target="_blank" class="text-white text-decoration-none footer-link">
+                        <i class="bi bi-geo-alt-fill me-2"></i> Torre Las Américas, Av. Arce, La Paz
+                    </a>
                 </div>
-                <div class="d-inline-flex align-items-center">
-                    <i class="bi bi-telephone-fill me-2"></i> [Teléfono]
+
+                <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
+                    <a href="tel:+59179169171" class="text-white text-decoration-none footer-link">
+                        <i class="bi bi-telephone-fill me-2"></i> 79169171
+                    </a>
                 </div>
-                <div class="d-inline-flex align-items-center">
-                    <i class="bi bi-envelope-fill me-2"></i> [Email]
+
+                <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
+                    <a href="mailto:info@nakutas.bo" class="text-white text-decoration-none footer-link">
+                        <i class="bi bi-envelope-fill me-2"></i> info@nakutas.bo
+                    </a>
                 </div>
+
             </div>
-            
-            <p class="mb-1 text-muted">&copy; 2025. Todos los derechos reservados.</p>
+            <p class="mb-1 text-muted mt-4">&copy; 2025. Todos los derechos reservados.</p>
         </div>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
