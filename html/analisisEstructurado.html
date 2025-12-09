@@ -26,8 +26,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="inicio.html">Inicio</a> 
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="analisisEstructurado.html">Análisis Estructurado</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="analisisEstructurado.html" id="analisisDropdown" role="button" aria-expanded="false">
+                                Análisis Estructurado
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="analisisDropdown">
+                                <li><a class="dropdown-item" href="modeloAmbiental.html">Modelo Ambiental</a></li>
+                                <li><a class="dropdown-item" href="modeloComportamiento.html">Modelo Comportamiento</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="orientadoObjetos.html">Orientado a Objetos</a>
@@ -47,33 +53,304 @@
         </nav>
     </header>
 
-    <main id="main-content" class="container" style="min-height: 500px; padding: 100px 0; text-align: center;">
+    <main id="main-content" class="container" style="min-height: 800px; padding: 120px 0 80px 0;">
     
-        <h1 class="display-4 text-dark mb-5">
-            <i class="bi bi-scissors me-3" style="color: #FFD700;"></i> 
-            Análisis Estructurado
-        </h1>
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-dark">
+                <i class="bi bi-diagram-3 me-2" style="color: #CC0000;"></i> 
+                Análisis <span style="color: #FFD700; text-shadow: 1px 1px 2px black;">ESTRUCTURADO</span>
+            </h1>
+
+        </div>
+
+        <div class="accordion custom-accordion" id="accordionAnalisis">
+
+            <h3 class="mb-4 mt-2 ps-2 border-start border-4 border-danger fw-bold">Modelo Ambiental</h3>
+
+            <div class="accordion-item mb-3 shadow-sm border-0">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="bi bi-bullseye me-2"></i> Declaración de Propósitos
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionAnalisis">
+                    <div class="accordion-body bg-light">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center mb-4 mb-md-0">
+                                <img src="../img/logoNakuta.jpg" alt="Diagrama UML" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px; transition: transform 0.2s;">
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="fw-bold mb-3" style="color: #111;">Objetivos del Sistema</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><strong>¿Qué?</strong> Un sistema de Salon de Belleza .</li>
+                                    <li class="mb-2"><strong>¿Cómo?</strong> Aplicando el paradigma del análisis estructurado "Modelo Esencial".</li>
+                                    <li class="mb-2"><strong>¿Dónde?</strong> En Ñak'utas "CabelloSano"</li>
+                                </ul>
+                                <hr>
+                                <p class="text-secondary small">
+                                    La declaración de propósitos es una descripción clara y concisa de lo que el sistema debe lograr. Define los objetivos principales sin entrar en detalles sobre su implementación.
+                                </p>
+                                <p class="text-secondary small mb-0">
+                                    Esta declaración establece las metas fundamentales que el sistema debe cumplir para satisfacer las necesidades de los usuarios y resolver los problemas identificados.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item mb-3 shadow-sm border-0">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="bi bi-diagram-2 me-2"></i> Diagrama De Contexto (Nivel 0)
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionAnalisis">
+                    <div class="accordion-body bg-light">
+                        <div class="text-center mb-4">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#Nivel0" class="d-inline-block text-decoration-none" title="Clic para ampliar" style="cursor: zoom-in;">
+                                <img src="../img/nivel0.png" alt="Nivel0" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px; transition: transform 0.2s;">
+                            </a>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item mb-5 shadow-sm border-0">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="bi bi-list-check me-2"></i> Lista De Acontecimientos
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionAnalisis">
+                    <div class="accordion-body bg-light">
+                        <h5 class="fw-bold mb-3 text-secondary">Lista de Acontecimientos</h5>
+                        <ul>
+                            <li>El Cliente realiza una solicitud de servicio.</li>
+                            <li>El Sistema envía la confirmación al Cliente.</li>
+                            <li>El Personal envía una solicitud de registro.</li>
+                            <li>El Sistema entrega datos al Personal.</li>
+                            <li>El Sistema registra la reserva.</li>
+                            <li>El Sistema registra la venta.</li>
+                            <li>El Sistema registra los productos.</li>
+                            <li>El Sistema registra al personal.</li>
+                            <li>El Sistema consulta la información del cliente.</li>
+                            <li>El Sistema consulta la información del servicio.</li>
+                        </ul>
+                      
+                        <p>La Lista de Acontecimientos es una herramienta fundamental del Modelo Ambiental que enumera los estímulos externos a los cuales el sistema debe responder. Su objetivo es definir el alcance funcional del sistema identificando qué sucesos del mundo real activan sus procesos internos.</p>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="mb-4 mt-5 ps-2 border-start border-4 border-danger fw-bold">Modelo De Comportamiento</h3>
+
+            <div class="accordion-item mb-3 shadow-sm border-0">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        DFD (Nivel 1)
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionAnalisis">
+                    <div class="accordion-body bg-light">
+                        <p>Contenido DFD Nivel 1</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item mb-3 shadow-sm border-0">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        DFD (Nivel 2)
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionAnalisis">
+                    <div class="accordion-body bg-light">
+                        <p>Contenido DFD Nivel 2</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item mb-3 shadow-sm border-0">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        UML
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionAnalisis">
+                    <div class="accordion-body bg-light">
+                        
+                        <div class="text-center mb-4">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#umlModal" class="d-inline-block text-decoration-none" title="Clic para ampliar" style="cursor: zoom-in;">
+                                <img src="../img/UML.png" alt="Diagrama UML" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px; transition: transform 0.2s;">
+                            </a>
+                            <p class="text-muted small mt-2 fst-italic">
+                                <i class="bi bi-zoom-in me-1"></i> Haz clic en la imagen para verla en detalle
+                            </p>
+                        </div>
+
+                        <p>El <strong>UML (Lenguaje Unificado de Modelado)</strong> es un estándar gráfico utilizado para visualizar, especificar, construir y documentar los artefactos de un sistema de software. Aunque tradicionalmente asociado al paradigma orientado a objetos, en este contexto nos permite representar clases, objetos y sus interacciones para complementar el análisis estructurado, ofreciendo una visión más clara de la arquitectura estática del sistema ÑAK'UTAS.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item mb-3 shadow-sm border-0">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Diagrama Entidad Relación
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionAnalisis">
+                    <div class="accordion-body bg-light">
+                        <div class="text-center mb-4">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#erModal" class="d-inline-block text-decoration-none" title="Clic para ampliar" style="cursor: zoom-in;">
+                                <img src="../img/DiagramaEntidadRelacion.png" alt="Diagrama Entidad Relación" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px; transition: transform 0.2s;">
+                            </a>
+                            <p class="text-muted small mt-2 fst-italic">
+                                <i class="bi bi-zoom-in me-1"></i> Haz clic en la imagen para verla en detalle
+                            </p>
+                        </div>
+                        <p>El <strong>Diagrama Entidad-Relación (DER)</strong> es una herramienta conceptual utilizada en la fase de análisis para representar gráficamente la estructura lógica de la información. Captura las entidades principales del negocio (como Clientes, Servicios, Productos) y define las relaciones y cardinalidades entre ellas. Es el paso previo fundamental para el diseño de la base de datos, asegurando que la información esté organizada de manera coherente con las reglas de negocio de la peluquería.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item mb-3 shadow-sm border-0">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        Modelo Relacional
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionAnalisis">
+                    <div class="accordion-body bg-light">
+                        
+                        <p class="mb-4">El <strong>Modelo Relacional</strong> representa la implementación lógica del diagrama E-R. Aquí, las entidades se transforman en tablas (relaciones), definiendo atributos específicos, claves primarias (para identificación única) y claves foráneas (para vincular tablas). Este modelo es la base sobre la cual se construye la base de datos física del sistema.</p>
+
+                        <div class="p-4 bg-white border rounded shadow-sm">
+                            <h5 class="fw-bold mb-4 text-danger border-bottom pb-2">Esquema de Tablas</h5>
+                            
+                            <ul class="list-unstyled" style="font-family: 'Consolas', 'Monaco', monospace; color: #333;">
+                                <li class="mb-2">• <strong>Personal</strong> (<span class="fw-bold">codPersonal</span>, nombre, ap_paterno, ap_materno, zona, nro, calle)</li>
+                                <li class="mb-2">• <strong>TelefPer</strong> (<span class="fw-bold">codTelf</span>, <span class="fw-bold">codPersonal</span>, telefono)</li>
+                                <li class="mb-2">• <strong>Cliente</strong> (<span class="fw-bold">codCliente</span>, nombre, ap_paterno, ap_materno, ci, fecha_nac, telefono, frecuente)</li>
+                                <li class="mb-2">• <strong>Reserva</strong> (<span class="fw-bold">codReserva</span>, fecha, hora, <span class="fw-bold">codCliente</span>)</li>
+                                <li class="mb-2">• <strong>Servicio</strong> (<span class="fw-bold">codServicio</span>, tipo_serv, precio, hora, fecha_servicio, <span class="fw-bold">codPersonal</span>, <span class="fw-bold">codCliente</span>)</li>
+                                <li class="mb-2">• <strong>Venta</strong> (<span class="fw-bold">codVenta</span>, precio_venta, cantidad_prod, fecha_venta, <span class="fw-bold">codPersonal</span>)</li>
+                                <li class="mb-2">• <strong>Producto</strong> (<span class="fw-bold">codProducto</span>, stock, tipo_prod, nom_prod, fecha_caducidad)</li>
+                                <li class="mb-2">• <strong>Contiene</strong> (<span class="fw-bold">codCont</span>, <span class="fw-bold">codProducto</span>, <span class="fw-bold">codVenta</span>)</li>
+                                <li class="mb-2">• <strong>Uso</strong> (<span class="fw-bold">codUso</span>, <span class="fw-bold">codProducto</span>, <span class="fw-bold">codServicio</span>)</li>
+                                <li class="mb-2">• <strong>Pide</strong> (<span class="fw-bold">codPide</span>, <span class="fw-bold">codServicio</span>, <span class="fw-bold">codProducto</span>, <span class="fw-bold">codReserva</span>)</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item mb-3 shadow-sm border-0">
+                <h2 class="accordion-header" id="headingNine">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        Diccionario De Datos
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionAnalisis">
+                    <div class="accordion-body bg-light">
+                        
+                        <div class="text-center mb-4">
+                        <img src="../img/DiccionarioDatos.drawio (1).png" alt="Diccionario de Datos" class="img-fluid rounded shadow-sm border position-relative" style="transition: transform 0.2s;">
+
+                            <p class="text-muted small mt-2 fst-italic">
+                                <i class="bi bi-zoom-in me-1"></i> Haz clic en la imagen para verla en detalle
+                            </p>
+                        </div>
+
+                        <p>El <strong>Diccionario de Datos</strong> es un repositorio centralizado que describe en detalle cada elemento de dato que fluye por el sistema. Proporciona definiciones precisas de los flujos de datos, almacenes y procesos, especificando nombres, alias, tipos de datos, longitudes y descripciones. Su propósito es asegurar una interpretación unificada de la información entre todos los analistas y desarrolladores del proyecto.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         
     </main>
 
     <footer class="footer-custom">
         <div class="container text-center">
             <div class="footer-icons-bar text-white">
-                <div class="d-inline-flex align-items-center">
-                    <i class="bi bi-geo-alt-fill me-2"></i> [Ubicación]
+                
+                <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Torre+Las+Americas,+Av.+Arce,+La+Paz" target="_blank" class="text-white text-decoration-none footer-link">
+                        <i class="bi bi-geo-alt-fill me-2"></i> Torre Las Américas, Av. Arce, La Paz
+                    </a>
                 </div>
-                <div class="d-inline-flex align-items-center">
-                    <i class="bi bi-telephone-fill me-2"></i> [Teléfono]
+
+                <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
+                    <a href="tel:+59179169171" class="text-white text-decoration-none footer-link">
+                        <i class="bi bi-telephone-fill me-2"></i> 79169171
+                    </a>
                 </div>
-                <div class="d-inline-flex align-items-center">
-                    <i class="bi bi-envelope-fill me-2"></i> [Email]
+
+                <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
+                    <a href="mailto:info@nakutas.bo" class="text-white text-decoration-none footer-link">
+                        <i class="bi bi-envelope-fill me-2"></i> info@nakutas.bo
+                    </a>
                 </div>
+
             </div>
-            <p class="mb-1 text-muted">&copy; 2025. Todos los derechos reservados.</p>
+            <p class="mb-1 text-muted mt-4">&copy; 2025. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <div class="modal fade" id="umlModal" tabindex="-1" aria-labelledby="umlModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen p-xl-5 p-md-3">
+            <div class="modal-content rounded-3 shadow overflow-hidden border-0">
+                <div class="modal-header bg-dark text-white py-2 border-0">
+                    <h5 class="modal-title fs-6" id="umlModalLabel">
+                        <i class="bi bi-diagram-3-fill me-2 text-warning"></i>Vista detallada: UML
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 bg-light overflow-auto d-flex justify-content-center align-items-start">
+                    <img src="../img/UML.png" class="img-fluid m-auto shadow-lg" alt="Diagrama UML Detallado" style="max-width: none; width: auto; min-width: 100%;">
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="erModal" tabindex="-1" aria-labelledby="erModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen p-xl-5 p-md-3">
+            <div class="modal-content rounded-3 shadow overflow-hidden border-0">
+                <div class="modal-header bg-dark text-white py-2 border-0">
+                    <h5 class="modal-title fs-6" id="erModalLabel">
+                        <i class="bi bi-diagram-3-fill me-2 text-warning"></i>Vista detallada: Diagrama Entidad Relación
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 bg-light overflow-auto d-flex justify-content-center align-items-start">
+                    <img src="../img/DiagramaEntidadRelacion.png" class="img-fluid m-auto shadow-lg" alt="Diagrama ER Detallado" style="max-width: none; width: auto; min-width: 100%;">
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Nivel0" tabindex="-1" aria-labelledby="Nivel0" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen p-xl-5 p-md-3">
+            <div class="modal-content rounded-3 shadow overflow-hidden border-0">
+                <div class="modal-header bg-dark text-white py-2 border-0">
+                    <h5 class="modal-title fs-6" id="Nivel0">
+                        <i class="bi bi-diagram-3-fill me-2 text-warning"></i>Vista detallada: Diagrama Nivel0
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 bg-light overflow-auto d-flex justify-content-center align-items-start">
+                    <img src="../img/nivel0.png" class="img-fluid m-auto shadow-lg" alt="Nivel0" style="max-width: none; width: auto; min-width: 100%;">
+                </div>
+             </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
-    </body>
+</body>
 </html>
