@@ -199,7 +199,7 @@ body {
 
 .carousel-item-custom h2 {
     font-family: 'Playfair Display', serif;
-    color: #CC0000;
+    color: #efb643;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -233,7 +233,7 @@ body {
 }
 
 /* -------------------------------------- */
-/* 4. Footer - Animaciones */
+/* 4. Footer - Animaciones (ACTUALIZADO) */
 /* -------------------------------------- */
 
 .footer-custom {
@@ -285,8 +285,10 @@ body {
     position: relative;
 }
 
-.footer-icons-bar i:hover {
-    color: #CC0000;
+
+.footer-icons-bar i:hover,
+.footer-link:hover i {
+    color: #ffffff;
     transform: translateY(-8px) scale(1.3);
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
 }
@@ -303,7 +305,8 @@ body {
     transition: width 0.4s ease;
 }
 
-.footer-icons-bar i:hover::after {
+.footer-icons-bar i:hover::after,
+.footer-link:hover i::after {
     width: 100%;
 }
 
@@ -313,8 +316,19 @@ body {
 }
 
 .footer-icons-bar > div:hover {
-    color: #FFD700;
-    transform: translateX(10px);
+    transform: translateX(10px); 
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.85) !important; 
+    text-decoration: none !important;
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #FFD700 !important; 
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 .text-muted {
@@ -327,7 +341,6 @@ body {
     color: #FFD700 !important;
     transform: scale(1.05);
 }
-
 /* -------------------------------------- */
 /* 5. Dropdown Hover para Desktop */
 /* -------------------------------------- */
@@ -450,4 +463,55 @@ html {
 @keyframes glowPulse {
     from { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
     to { text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6); }
+}
+/* -------------------------------------- */
+/* 7. Estilos del Acordeón ÑAK'UTAS (Negro/Dorado) */
+/* -------------------------------------- */
+
+/* Estilo del contenedor del item */
+.custom-accordion .accordion-item {
+    background-color: transparent; /* Fondo transparente para no tapar el body */
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* BOTÓN CERRADO (Estado normal) */
+.custom-accordion .accordion-button.collapsed {
+    background-color: #111111; /* Negro corporativo */
+    color: #ffffff;            /* Texto blanco */
+    border-bottom: 2px solid #FFD700; /* Línea dorada sutil abajo */
+    transition: all 0.3s ease;
+}
+
+/* BOTÓN ABIERTO (Estado activo) */
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: #FFD700; /* Dorado corporativo al abrirse */
+    color: #111111;            /* Texto negro para contraste */
+    box-shadow: none;          /* Quitar borde azul default de bootstrap */
+    font-weight: 800;          /* Texto más grueso */
+    border-bottom: none;
+}
+
+/* Icono de la flecha (Chevron) */
+/* Cuando está cerrado (fondo negro), flecha blanca */
+.custom-accordion .accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+/* Cuando está abierto (fondo dorado), flecha negra */
+.custom-accordion .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23111111'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Hover (pasar el mouse por encima cuando está cerrado) */
+.custom-accordion .accordion-button.collapsed:hover {
+    background-color: #1a1a1a;
+    color: #FFD700; /* El texto se vuelve dorado */
+    padding-left: 25px; /* Animación de desplazamiento */
+}
+
+/* Cuerpo del contenido */
+.custom-accordion .accordion-body {
+    border-top: 4px solid #CC0000; /* Línea roja de acento al abrir */
+    background-color: #ffffff;
 }
