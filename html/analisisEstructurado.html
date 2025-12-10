@@ -7,6 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/styles.css"> 
+    
+    <style>
+        /* Ajuste de desplazamiento para que el título no quede tapado por el navbar */
+        #modeloAmbiental, #modeloComportamiento {
+            scroll-margin-top: 100px; 
+        }
+    </style>
 </head>
 <body>
 
@@ -26,15 +33,32 @@
                         <li class="nav-item">
                             <a class="nav-link" href="inicio.html">Inicio</a> 
                         </li>
+                        
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="analisisEstructurado.html" id="analisisDropdown" role="button" aria-expanded="false">
                                 Análisis Estructurado
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="analisisDropdown">
-                                <li><a class="dropdown-item" href="modeloAmbiental.html">Modelo Ambiental</a></li>
-                                <li><a class="dropdown-item" href="modeloComportamiento.html">Modelo Comportamiento</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#modeloAmbiental" 
+                                       data-bs-toggle="tooltip" 
+                                       data-bs-placement="right" 
+                                       title="Define la interfaz entre el sistema y el ambiente exterior.">
+                                       Modelo Ambiental
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#modeloComportamiento"
+                                       data-bs-toggle="tooltip" 
+                                       data-bs-placement="right" 
+                                       title="Describe el interior del sistema y su lógica de procesamiento.">
+                                       Modelo Comportamiento
+                                    </a>
+                                </li>
                             </ul>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="orientadoObjetos.html">Orientado a Objetos</a>
                         </li>
@@ -60,12 +84,11 @@
                 <i class="bi bi-diagram-3 me-2" style="color: #CC0000;"></i> 
                 Análisis <span style="color: #FFD700; text-shadow: 1px 1px 2px black;">ESTRUCTURADO</span>
             </h1>
-
         </div>
 
         <div class="accordion custom-accordion" id="accordionAnalisis">
 
-            <h3 class="mb-4 mt-2 ps-2 border-start border-4 border-danger fw-bold">Modelo Ambiental</h3>
+            <h3 id="modeloAmbiental" class="mb-4 mt-2 ps-2 border-start border-4 border-danger fw-bold">Modelo Ambiental</h3>
 
             <div class="accordion-item mb-3 shadow-sm border-0">
                 <h2 class="accordion-header" id="headingOne">
@@ -77,21 +100,20 @@
                     <div class="accordion-body bg-light">
                         <div class="row align-items-center">
                             <div class="col-md-4 text-center mb-4 mb-md-0">
-                                <img src="../img/logoNakuta.jpg" alt="Diagrama UML" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px; transition: transform 0.2s;">
+                                <div class="p-4 bg-white rounded shadow-sm border">
+                                    <img src="../img/logoNakuta.jpg" alt="Logo Ñakutas" class="img-fluid" style="max-height: 200px;">
+                                </div>
                             </div>
                             <div class="col-md-8">
                                 <h4 class="fw-bold mb-3" style="color: #111;">Objetivos del Sistema</h4>
                                 <ul class="list-unstyled">
-                                    <li class="mb-2"><strong>¿Qué?</strong> Un sistema de Salon de Belleza .</li>
+                                    <li class="mb-2"><strong>¿Qué?</strong> Un sistema de Salón de Belleza.</li>
                                     <li class="mb-2"><strong>¿Cómo?</strong> Aplicando el paradigma del análisis estructurado "Modelo Esencial".</li>
-                                    <li class="mb-2"><strong>¿Dónde?</strong> En Ñak'utas "CabelloSano"</li>
+                                    <li class="mb-2"><strong>¿Dónde?</strong> En Ñak'utas "CabelloSano".</li>
                                 </ul>
                                 <hr>
                                 <p class="text-secondary small">
                                     La declaración de propósitos es una descripción clara y concisa de lo que el sistema debe lograr. Define los objetivos principales sin entrar en detalles sobre su implementación.
-                                </p>
-                                <p class="text-secondary small mb-0">
-                                    Esta declaración establece las metas fundamentales que el sistema debe cumplir para satisfacer las necesidades de los usuarios y resolver los problemas identificados.
                                 </p>
                             </div>
                         </div>
@@ -109,9 +131,11 @@
                     <div class="accordion-body bg-light">
                         <div class="text-center mb-4">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#Nivel0" class="d-inline-block text-decoration-none" title="Clic para ampliar" style="cursor: zoom-in;">
-                                <img src="../img/nivel0.png" alt="Nivel0" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px; transition: transform 0.2s;">
+                                <img src="../img/nivel0.png" alt="Nivel 0" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px; transition: transform 0.2s;">
                             </a>
-    
+                            <p class="text-muted small mt-2 fst-italic">
+                                <i class="bi bi-zoom-in me-1"></i> Haz clic en la imagen para verla en detalle
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -125,27 +149,57 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionAnalisis">
                     <div class="accordion-body bg-light">
-                        <h5 class="fw-bold mb-3 text-secondary">Lista de Acontecimientos</h5>
-                        <ul>
-                            <li>El Cliente realiza una solicitud de servicio.</li>
-                            <li>El Sistema envía la confirmación al Cliente.</li>
-                            <li>El Personal envía una solicitud de registro.</li>
-                            <li>El Sistema entrega datos al Personal.</li>
-                            <li>El Sistema registra la reserva.</li>
-                            <li>El Sistema registra la venta.</li>
-                            <li>El Sistema registra los productos.</li>
-                            <li>El Sistema registra al personal.</li>
-                            <li>El Sistema consulta la información del cliente.</li>
-                            <li>El Sistema consulta la información del servicio.</li>
+                        <div class="alert alert-light border-start border-4 border-warning shadow-sm">
+                            <h5 class="fw-bold text-dark"><i class="bi bi-list-ol me-2"></i>Flujo de Eventos del Sistema</h5>
+                            <p class="mb-0 text-muted">A continuación se detallan los estímulos externos e internos que activan los procesos del sistema:</p>
+                        </div>
+                        <ul class="list-group list-group-flush rounded shadow-sm">
+                            <li class="list-group-item">
+                                <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                                <strong>El Cliente realiza una solicitud de servicio.</strong>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-arrow-left-circle-fill text-primary me-2"></i>
+                                <strong>El Sistema envía la confirmación al Cliente.</strong>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+                                <strong>El Personal envía una solicitud de registro.</strong>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-arrow-left-circle-fill text-primary me-2"></i>
+                                <strong>El Sistema entrega datos al Personal.</strong>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-hdd-stack-fill text-secondary me-2"></i>
+                                <strong>El Sistema registra la reserva.</strong>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-hdd-stack-fill text-secondary me-2"></i>
+                                <strong>El Sistema registra la venta.</strong>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-hdd-stack-fill text-secondary me-2"></i>
+                                <strong>El Sistema registra los productos.</strong>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-hdd-stack-fill text-secondary me-2"></i>
+                                <strong>El Sistema registra al personal.</strong>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-search text-warning me-2"></i>
+                                <strong>El Sistema consulta la información del cliente.</strong>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="bi bi-search text-warning me-2"></i>
+                                <strong>El Sistema consulta la información del servicio.</strong>
+                            </li>
                         </ul>
-                      
-                        <p>La Lista de Acontecimientos es una herramienta fundamental del Modelo Ambiental que enumera los estímulos externos a los cuales el sistema debe responder. Su objetivo es definir el alcance funcional del sistema identificando qué sucesos del mundo real activan sus procesos internos.</p>
-                       
                     </div>
                 </div>
             </div>
 
-            <h3 class="mb-4 mt-5 ps-2 border-start border-4 border-danger fw-bold">Modelo De Comportamiento</h3>
+            <h3 id="modeloComportamiento" class="mb-4 mt-5 ps-2 border-start border-4 border-danger fw-bold">Modelo De Comportamiento</h3>
 
             <div class="accordion-item mb-3 shadow-sm border-0">
                 <h2 class="accordion-header" id="headingFour">
@@ -155,7 +209,9 @@
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionAnalisis">
                     <div class="accordion-body bg-light">
-                        <p>Contenido DFD Nivel 1</p>
+                        <div class="text-center mb-4">
+                            <img src="../img/nivel1.png" alt="Nivel1" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px;">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -168,7 +224,12 @@
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionAnalisis">
                     <div class="accordion-body bg-light">
-                        <p>Contenido DFD Nivel 2</p>
+                        <div class="text-center mb-4">
+                            <img src="../img/nivel2-1.png" alt="nivel2-1" class="img-fluid rounded shadow-sm border mb-3" style="max-height: 400px;">
+                            <img src="../img/nivel2-2.png" alt="nivel2-2" class="img-fluid rounded shadow-sm border mb-3" style="max-height: 400px;">
+                            <img src="../img/nivel2-3.png" alt="nivel2-3" class="img-fluid rounded shadow-sm border mb-3" style="max-height: 400px;">
+                            <img src="../img/nivel2-4.png" alt="nivel2-4" class="img-fluid rounded shadow-sm border mb-3" style="max-height: 400px;">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -181,7 +242,6 @@
                 </h2>
                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionAnalisis">
                     <div class="accordion-body bg-light">
-                        
                         <div class="text-center mb-4">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#umlModal" class="d-inline-block text-decoration-none" title="Clic para ampliar" style="cursor: zoom-in;">
                                 <img src="../img/UML.png" alt="Diagrama UML" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px; transition: transform 0.2s;">
@@ -190,8 +250,7 @@
                                 <i class="bi bi-zoom-in me-1"></i> Haz clic en la imagen para verla en detalle
                             </p>
                         </div>
-
-                        <p>El <strong>UML (Lenguaje Unificado de Modelado)</strong> es un estándar gráfico utilizado para visualizar, especificar, construir y documentar los artefactos de un sistema de software. Aunque tradicionalmente asociado al paradigma orientado a objetos, en este contexto nos permite representar clases, objetos y sus interacciones para complementar el análisis estructurado, ofreciendo una visión más clara de la arquitectura estática del sistema ÑAK'UTAS.</p>
+                        <p>El <strong>UML (Lenguaje Unificado de Modelado)</strong> es un estándar gráfico utilizado para visualizar, especificar, construir y documentar los artefactos de un sistema de software.</p>
                     </div>
                 </div>
             </div>
@@ -212,7 +271,7 @@
                                 <i class="bi bi-zoom-in me-1"></i> Haz clic en la imagen para verla en detalle
                             </p>
                         </div>
-                        <p>El <strong>Diagrama Entidad-Relación (DER)</strong> es una herramienta conceptual utilizada en la fase de análisis para representar gráficamente la estructura lógica de la información. Captura las entidades principales del negocio (como Clientes, Servicios, Productos) y define las relaciones y cardinalidades entre ellas. Es el paso previo fundamental para el diseño de la base de datos, asegurando que la información esté organizada de manera coherente con las reglas de negocio de la peluquería.</p>
+                        <p>El <strong>Diagrama Entidad-Relación (DER)</strong> es una herramienta conceptual utilizada en la fase de análisis para representar gráficamente la estructura lógica de la información.</p>
                     </div>
                 </div>
             </div>
@@ -225,12 +284,9 @@
                 </h2>
                 <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionAnalisis">
                     <div class="accordion-body bg-light">
-                        
-                        <p class="mb-4">El <strong>Modelo Relacional</strong> representa la implementación lógica del diagrama E-R. Aquí, las entidades se transforman en tablas (relaciones), definiendo atributos específicos, claves primarias (para identificación única) y claves foráneas (para vincular tablas). Este modelo es la base sobre la cual se construye la base de datos física del sistema.</p>
-
+                        <p class="mb-4">El <strong>Modelo Relacional</strong> representa la implementación lógica del diagrama E-R.</p>
                         <div class="p-4 bg-white border rounded shadow-sm">
                             <h5 class="fw-bold mb-4 text-danger border-bottom pb-2">Esquema de Tablas</h5>
-                            
                             <ul class="list-unstyled" style="font-family: 'Consolas', 'Monaco', monospace; color: #333;">
                                 <li class="mb-2">• <strong>Personal</strong> (<span class="fw-bold">codPersonal</span>, nombre, ap_paterno, ap_materno, zona, nro, calle)</li>
                                 <li class="mb-2">• <strong>TelefPer</strong> (<span class="fw-bold">codTelf</span>, <span class="fw-bold">codPersonal</span>, telefono)</li>
@@ -244,7 +300,6 @@
                                 <li class="mb-2">• <strong>Pide</strong> (<span class="fw-bold">codPide</span>, <span class="fw-bold">codServicio</span>, <span class="fw-bold">codProducto</span>, <span class="fw-bold">codReserva</span>)</li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -257,48 +312,42 @@
                 </h2>
                 <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionAnalisis">
                     <div class="accordion-body bg-light">
-                        
                         <div class="text-center mb-4">
-                        <img src="../img/DiccionarioDatos.drawio (1).png" alt="Diccionario de Datos" class="img-fluid rounded shadow-sm border position-relative" style="transition: transform 0.2s;">
-
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#diccionarioModal" class="d-inline-block text-decoration-none" title="Clic para ampliar" style="cursor: zoom-in;">
+                                <img src="../img/DiccionarioDatos.drawio (1).png" alt="Diccionario de Datos" class="img-fluid rounded shadow-sm border position-relative" style="transition: transform 0.2s;">
+                            </a>
                             <p class="text-muted small mt-2 fst-italic">
                                 <i class="bi bi-zoom-in me-1"></i> Haz clic en la imagen para verla en detalle
                             </p>
                         </div>
-
-                        <p>El <strong>Diccionario de Datos</strong> es un repositorio centralizado que describe en detalle cada elemento de dato que fluye por el sistema. Proporciona definiciones precisas de los flujos de datos, almacenes y procesos, especificando nombres, alias, tipos de datos, longitudes y descripciones. Su propósito es asegurar una interpretación unificada de la información entre todos los analistas y desarrolladores del proyecto.</p>
+                        <p>El <strong>Diccionario de Datos</strong> es un repositorio centralizado que describe en detalle cada elemento de dato que fluye por el sistema.</p>
                     </div>
                 </div>
             </div>
 
         </div>
-        
     </main>
 
     <footer class="footer-custom">
         <div class="container text-center">
             <div class="footer-icons-bar text-white">
-                
                 <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
                     <a href="https://www.google.com/maps/search/?api=1&query=Torre+Las+Americas,+Av.+Arce,+La+Paz" target="_blank" class="text-white text-decoration-none footer-link">
                         <i class="bi bi-geo-alt-fill me-2"></i> Torre Las Américas, Av. Arce, La Paz
                     </a>
                 </div>
-
                 <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
                     <a href="tel:+59179169171" class="text-white text-decoration-none footer-link">
                         <i class="bi bi-telephone-fill me-2"></i> 79169171
                     </a>
                 </div>
-
                 <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
                     <a href="mailto:info@nakutas.bo" class="text-white text-decoration-none footer-link">
                         <i class="bi bi-envelope-fill me-2"></i> info@nakutas.bo
                     </a>
                 </div>
-
             </div>
-            <p class="mb-1 text-muted mt-4">&copy; 2025. Todos los derechos reservados.</p>
+            <p class="mb-1 text-muted mt-4">© 2025. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -306,9 +355,7 @@
         <div class="modal-dialog modal-fullscreen p-xl-5 p-md-3">
             <div class="modal-content rounded-3 shadow overflow-hidden border-0">
                 <div class="modal-header bg-dark text-white py-2 border-0">
-                    <h5 class="modal-title fs-6" id="umlModalLabel">
-                        <i class="bi bi-diagram-3-fill me-2 text-warning"></i>Vista detallada: UML
-                    </h5>
+                    <h5 class="modal-title fs-6" id="umlModalLabel"><i class="bi bi-diagram-3-fill me-2 text-warning"></i>Vista detallada: UML</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-0 bg-light overflow-auto d-flex justify-content-center align-items-start">
@@ -322,9 +369,7 @@
         <div class="modal-dialog modal-fullscreen p-xl-5 p-md-3">
             <div class="modal-content rounded-3 shadow overflow-hidden border-0">
                 <div class="modal-header bg-dark text-white py-2 border-0">
-                    <h5 class="modal-title fs-6" id="erModalLabel">
-                        <i class="bi bi-diagram-3-fill me-2 text-warning"></i>Vista detallada: Diagrama Entidad Relación
-                    </h5>
+                    <h5 class="modal-title fs-6" id="erModalLabel"><i class="bi bi-diagram-3-fill me-2 text-warning"></i>Vista detallada: Diagrama Entidad Relación</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-0 bg-light overflow-auto d-flex justify-content-center align-items-start">
@@ -334,13 +379,11 @@
         </div>
     </div>
 
-    <div class="modal fade" id="Nivel0" tabindex="-1" aria-labelledby="Nivel0" aria-hidden="true">
+    <div class="modal fade" id="Nivel0" tabindex="-1" aria-labelledby="Nivel0Label" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen p-xl-5 p-md-3">
             <div class="modal-content rounded-3 shadow overflow-hidden border-0">
                 <div class="modal-header bg-dark text-white py-2 border-0">
-                    <h5 class="modal-title fs-6" id="Nivel0">
-                        <i class="bi bi-diagram-3-fill me-2 text-warning"></i>Vista detallada: Diagrama Nivel0
-                    </h5>
+                    <h5 class="modal-title fs-6" id="Nivel0Label"><i class="bi bi-diagram-3-fill me-2 text-warning"></i>Vista detallada: Diagrama Nivel0</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-0 bg-light overflow-auto d-flex justify-content-center align-items-start">
@@ -350,7 +393,28 @@
         </div>
     </div>
 
+    <div class="modal fade" id="diccionarioModal" tabindex="-1" aria-labelledby="diccionarioModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen p-xl-5 p-md-3">
+            <div class="modal-content rounded-3 shadow overflow-hidden border-0">
+                <div class="modal-header bg-dark text-white py-2 border-0">
+                    <h5 class="modal-title fs-6" id="diccionarioModalLabel"><i class="bi bi-table me-2 text-warning"></i>Vista detallada: Diccionario de Datos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 bg-light overflow-auto d-flex justify-content-center align-items-start">
+                    <img src="../img/DiccionarioDatos.drawio (1).png" class="img-fluid m-auto shadow-lg" alt="Diccionario Detallado" style="max-width: none; width: auto; min-width: 100%;">
+                </div>
+             </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
+    
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
 </body>
 </html>
